@@ -1,4 +1,4 @@
-package net.combase.example.eip.throttle.service;
+package io.github.lumue.example.integration.srap.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.integration.annotation.MessageEndpoint;

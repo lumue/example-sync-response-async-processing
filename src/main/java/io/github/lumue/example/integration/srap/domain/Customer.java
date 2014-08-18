@@ -1,4 +1,4 @@
-package net.combase.example.eip.throttle.domain;
+package io.github.lumue.example.integration.srap.domain;
 
 import javax.persistence.Entity;
 

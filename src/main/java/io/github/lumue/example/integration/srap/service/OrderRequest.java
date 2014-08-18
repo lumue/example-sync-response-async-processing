@@ -1,4 +1,4 @@
-package net.combase.example.eip.throttle.service;
+package io.github.lumue.example.integration.srap.service;
 
 import java.util.UUID;
 

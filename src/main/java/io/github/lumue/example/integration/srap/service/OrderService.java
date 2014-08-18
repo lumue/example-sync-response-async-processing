@@ -1,13 +1,13 @@
-package net.combase.example.eip.throttle.service;
+package io.github.lumue.example.integration.srap.service;
+
+import io.github.lumue.example.integration.srap.dao.CustomerRepository;
+import io.github.lumue.example.integration.srap.dao.OrderRepository;
+import io.github.lumue.example.integration.srap.dao.ProductRepository;
+import io.github.lumue.example.integration.srap.domain.Customer;
+import io.github.lumue.example.integration.srap.domain.Order;
+import io.github.lumue.example.integration.srap.domain.Product;
 
 import java.math.BigDecimal;
-
-import net.combase.example.eip.throttle.dao.CustomerRepository;
-import net.combase.example.eip.throttle.dao.OrderRepository;
-import net.combase.example.eip.throttle.dao.ProductRepository;
-import net.combase.example.eip.throttle.domain.Customer;
-import net.combase.example.eip.throttle.domain.Order;
-import net.combase.example.eip.throttle.domain.Product;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

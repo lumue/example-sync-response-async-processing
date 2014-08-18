@@ -1,7 +1,7 @@
-package net.combase.example.eip.throttle.web;
+package io.github.lumue.example.integration.srap.web;
 
-import net.combase.example.eip.throttle.service.OrderRequest;
-import net.combase.example.eip.throttle.service.OrderService;
+import io.github.lumue.example.integration.srap.service.OrderRequest;
+import io.github.lumue.example.integration.srap.service.OrderService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.MessageChannel;

@@ -1,4 +1,4 @@
-package net.combase.example.eip.throttle;
+package io.github.lumue.example.integration.srap;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

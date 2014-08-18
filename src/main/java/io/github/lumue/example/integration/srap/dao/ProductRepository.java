@@ -1,6 +1,6 @@
-package net.combase.example.eip.throttle.dao;
+package io.github.lumue.example.integration.srap.dao;
 
-import net.combase.example.eip.throttle.domain.Product;
+import io.github.lumue.example.integration.srap.domain.Product;
 
 import org.springframework.data.repository.CrudRepository;
 
