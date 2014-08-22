@@ -34,18 +34,18 @@ public class OrderService {
 	private OrderRepository orderRepository;
 
 	@Transactional(propagation = Propagation.REQUIRES_NEW, 
-						isolation = Isolation.SERIALIZABLE) 
+						isolation = Isolation.REPEATABLE_READ) 
 	// @Isolation.Serializable, because product.stock has to be locked during
 	// transaction
 	public void processOrderRequest(OrderRequest orderRequest) {
 		
-		Customer customer = customerRepository.findOne(orderRequest.getCustomerId());
-		Product product = productRepository.findOne(orderRequest.getProdcutId());
+		Customer customer = customerRepository.findByNumber(orderRequest.getCustomerId());
+		Product product = productRepository.findByNumber(orderRequest.getProdcutId());
 		BigDecimal quantity = new BigDecimal(orderRequest.getQuantity());
 
 		Order order = new Order(product, customer, quantity);
 		orderRepository.save(order);
-		product.setStock(product.getStock().subtract(quantity));
+		//product.setStock(product.getStock().subtract(quantity));
 	}
 	
 	@PostConstruct
