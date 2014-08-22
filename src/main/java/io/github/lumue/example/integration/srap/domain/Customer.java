@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 @Entity
 public class Customer extends BaseEntity {
 
+	private String number;
+	
 	private String name;
 
 	public String getName() {
@@ -15,5 +17,12 @@ public class Customer extends BaseEntity {
 		this.name = name;
 	}
 
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String nummer) {
+		this.number = nummer;
+	}
 
 }
