@@ -1,5 +1,6 @@
 package io.github.lumue.example.integration.srap.service;
 
+import io.github.lumue.example.integration.srap.TestSetup;
 import io.github.lumue.example.integration.srap.dao.CustomerRepository;
 import io.github.lumue.example.integration.srap.dao.OrderRepository;
 import io.github.lumue.example.integration.srap.dao.ProductRepository;
@@ -8,6 +9,8 @@ import io.github.lumue.example.integration.srap.domain.Order;
 import io.github.lumue.example.integration.srap.domain.Product;
 
 import java.math.BigDecimal;
+
+import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +21,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class OrderService {
 
+	@Autowired(required = true)
+	private TestSetup testSetup;
+	
 	@Autowired(required = true)
 	private CustomerRepository customerRepository;
 
@@ -41,5 +47,10 @@ public class OrderService {
 		orderRepository.save(order);
 		product.setStock(product.getStock().subtract(quantity));
 	}
-
+	
+	@PostConstruct
+	void postConstruct()
+	{
+		testSetup.insertTestData();
+	}
 }

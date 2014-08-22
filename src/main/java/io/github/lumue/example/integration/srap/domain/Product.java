@@ -11,7 +11,15 @@ public class Product extends BaseEntity {
 	
 	private String name;
 
-	private BigDecimal stock;
+	private BigDecimal stock=BigDecimal.ZERO;
+	
+	
+
+	public Product(String number, String name) {
+		super();
+		this.number = number;
+		this.name = name;
+	}
 
 	public String getName() {
 		return name;
@@ -36,6 +44,12 @@ public class Product extends BaseEntity {
 	public void setNumber(String number) {
 		this.number = number;
 	}
+
+	Product() {
+		super();
+	}
+	
+	
 	
 	
 
