@@ -1,6 +1,7 @@
 package io.github.lumue.example.integration.srap.domain;
 
-import java.time.LocalDateTime;
+
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -19,13 +20,13 @@ public abstract class BaseEntity {
 	private String id;
 
 	@Column(updatable = false)
-	private LocalDateTime created = LocalDateTime.now();
+	private Date created = new Date();
 
 	public String getId() {
 		return id;
 	}
 
-	public LocalDateTime getCreated() {
+	public Date getCreated() {
 		return created;
 	}
 
